@@ -97,6 +97,9 @@ const MainScreen = () => {
                 <Text style={{ color: "#ea3f38" }}>"Studying</Text> online is
                 now much easier"
               </Text>
+              <View style={styles.btn}>
+                <Text style={styles.btnText}>Book a free demo</Text>
+              </View>
               
             </View>
             <Image
@@ -250,6 +253,19 @@ const styles = StyleSheet.create({
     justifyContent: "space-evenly",
     marginLeft: 15,
   },
+  btn: {
+    backgroundColor: "#e15a48",
+    width: 140,
+    height: 40,
+    borderRadius: 6,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  btnText: {
+    color: "#fff",
+    fontFamily: "SourceSansPro_600SemiBold",
+    fontSize: 14,
+  }
 });
 
 export default MainScreen;
