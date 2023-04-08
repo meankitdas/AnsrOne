@@ -59,6 +59,7 @@ const MainScreen = () => {
     },
   ];
 
+
   const Courses = [
     {
       id: 1,
