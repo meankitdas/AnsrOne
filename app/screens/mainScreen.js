@@ -68,7 +68,7 @@ const MainScreen = () => {
     },
     {
       id: 2,
-      title: "Maths",
+      title: "Math",
       image: require("../../assets/pie.png"),
     },
   ];
@@ -194,7 +194,7 @@ const styles = StyleSheet.create({
   bg: {
     backgroundColor: "#13192e",
     height: "100%",
-    marginTop: 25,
+    // marginTop: 25,
   },
   title: {
     fontFamily: "SourceSansPro_600SemiBold",
