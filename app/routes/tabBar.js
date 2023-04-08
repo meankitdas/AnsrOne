@@ -32,7 +32,7 @@ const TabBar = () => {
         }}
       />
       <Tab.Screen
-        name="Profile"
+        name="Video"
         component={VideoScreen}
         options={{
           tabBarIcon: () => (
