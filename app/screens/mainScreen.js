@@ -1,12 +1,13 @@
 import React from "react";
-import { View, StyleSheet, Text, FlatList } from "react-native";
-import { Image } from "expo-image";
+import { View, StyleSheet, Text, FlatList, Image } from "react-native";
 
 import Icon from "react-native-vector-icons/Entypo";
 import Download from "react-native-vector-icons/Feather";
 import WhiteDot from "react-native-vector-icons/Entypo";
 import Arrow from "react-native-vector-icons/MaterialIcons";
 import Space from "../../assets/astronaut.png";
+
+import { Button } from "../components";
 
 import AppLoading from "expo-app-loading";
 
@@ -59,7 +60,6 @@ const MainScreen = () => {
     },
   ];
 
-
   const Courses = [
     {
       id: 1,
@@ -86,7 +86,23 @@ const MainScreen = () => {
         {/* <ImageSlider /> */}
         <View style={styles.image}>
           <View style={styles.imageCom}>
-            <View></View>
+            <View style={styles.imageView}>
+              <Text
+                style={{
+                  color: "#fff",
+                  fontSize: 22,
+                  fontFamily: "SourceSansPro_600SemiBold",
+                }}
+              >
+                <Text style={{ color: "#ea3f38" }}>"Studying</Text> online is
+                now much easier"
+              </Text>
+              
+            </View>
+            <Image
+              source={require("../../assets/child.png")}
+              style={styles.pic}
+            />
           </View>
           <View style={styles.dot}>
             <WhiteDot name="dot-single" size={35} color="#fff" />
@@ -98,7 +114,7 @@ const MainScreen = () => {
         {/* Name  */}
         <View style={styles.section}>
           <Text style={styles.title}>Hi, Sneha</Text>
-          {/* <Image source={Space} style={styles.space} /> */}
+          <Image source={require("../../assets/space.png")} style={styles.space} />
         </View>
 
         {/* Live  */}
@@ -146,7 +162,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#3e4a74",
     justifyContent: "space-evenly",
     alignItems: "center",
-    marginTop: 20,
+
     display: "flex",
     flexDirection: "row",
   },
@@ -164,6 +180,9 @@ const styles = StyleSheet.create({
     width: 370,
     borderRadius: 10,
     marginTop: 20,
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    alignItems: "flex-end",
   },
   dot: {
     display: "flex",
@@ -172,6 +191,7 @@ const styles = StyleSheet.create({
   bg: {
     backgroundColor: "#13192e",
     height: "100%",
+    marginTop: 25,
   },
   title: {
     fontFamily: "SourceSansPro_600SemiBold",
@@ -180,11 +200,13 @@ const styles = StyleSheet.create({
   },
   section: {
     marginLeft: 20,
+    flexDirection: "row",
   },
   space: {
-    flex: 1,
-    width: "100%",
-    backgroundColor: "#0553",
+    
+    height: 50,
+    width: 50,
+    
   },
   live: {
     display: "flex",
@@ -216,6 +238,17 @@ const styles = StyleSheet.create({
     textAlign: "center",
     alignItems: "center",
     marginTop: 20,
+  },
+  pic: {
+    height: 150,
+    width: 130,
+  },
+  imageView: {
+    height: "100%",
+    width: "60%",
+    // backgroundColor: "#3e4a74",
+    justifyContent: "space-evenly",
+    marginLeft: 15,
   },
 });
 

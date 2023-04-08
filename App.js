@@ -11,20 +11,9 @@ import { MainScreen, VideoScreen } from "./app/screens";
 export default function App() {
   return (
     <SafeAreaView>
-      {/* <Text>Hello</Text> */}
-      <VideoScreen />
-      {/* <YoutubePlayer
-      height={300}
-      play={true}
-      videoId={"l1s0nYaZBfM"}
-      initialPlayerParams={{
-        controls: 0,
-        modestBranding: 1,
-        rel: 0,
-        iv_load_policy: 3,
-        disablekb: 1,
-      }}
-    /> */}
+      
+      <MainScreen />
+     
       
     </SafeAreaView>
   );
