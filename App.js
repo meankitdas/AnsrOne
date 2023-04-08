@@ -6,13 +6,13 @@ import { WebView } from "react-native-webview";
 import ReactPlayer from "react-player";
 
 import YoutubePlayer from "react-native-youtube-iframe";
-import { MainScreen } from "./app/screens";
+import { MainScreen, VideoScreen } from "./app/screens";
 
 export default function App() {
   return (
     <SafeAreaView>
       {/* <Text>Hello</Text> */}
-      <MainScreen />
+      <VideoScreen />
       {/* <YoutubePlayer
       height={300}
       play={true}

@@ -1,3 +1,4 @@
 import MainScreen from "./mainScreen";
+import VideoScreen from "./videoScreen";
 
-export { MainScreen };
+export { MainScreen, VideoScreen };
