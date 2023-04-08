@@ -114,6 +114,7 @@ const styles = StyleSheet.create({
   },
   videos: {
     marginTop: 15,
+    marginBottom: 55,
   },
 });
 
