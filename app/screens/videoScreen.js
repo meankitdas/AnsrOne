@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Text, FlatList } from "react-native";
+import { View, StyleSheet, Text, FlatList, ScrollView } from "react-native";
 import { Youtube, Button, BorderButton, VideoComponent } from "../components";
 
 const VideoScreen = () => {
@@ -34,7 +34,7 @@ const VideoScreen = () => {
     },
   ];
   return (
-    <View style={styles.page}>
+    <ScrollView style={styles.page}>
       <View style={styles.video}>
         <Youtube />
       </View>
@@ -64,7 +64,7 @@ const VideoScreen = () => {
           />
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

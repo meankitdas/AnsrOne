@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Text, FlatList, Image } from "react-native";
+import { View, StyleSheet, Text, FlatList, Image, ScrollView } from "react-native";
 
 import Icon from "react-native-vector-icons/Entypo";
 import Download from "react-native-vector-icons/Feather";
@@ -77,7 +77,7 @@ const MainScreen = () => {
     return <AppLoading />;
   } else {
     return (
-      <View style={styles.bg}>
+      <ScrollView style={styles.bg}>
         <View style={styles.navBar}>
           <Icon name="menu" size={40} color="#fff" />
           <SearchBar />
@@ -154,7 +154,7 @@ const MainScreen = () => {
             keyExtractor={(item) => item.id}
           />
         </View>
-      </View>
+      </ScrollView>
     );
   }
 };
