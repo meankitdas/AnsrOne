@@ -59,6 +59,19 @@ const MainScreen = () => {
     },
   ];
 
+  const Courses = [
+    {
+      id: 1,
+      title: "Class 6th",
+      image: require("../../assets/ninja.png"),
+    },
+    {
+      id: 2,
+      title: "Maths",
+      image: require("../../assets/pie.png"),
+    },
+  ];
+
   if (!fontsLoaded) {
     return <AppLoading />;
   } else {
@@ -112,7 +125,14 @@ const MainScreen = () => {
             <Text style={styles.course}>Cohort Based Courses</Text>
             <Arrow name="arrow-forward-ios" size={18} color="#fff" />
           </View>
-          <CohotCard />
+          <FlatList
+            data={Courses}
+            horizontal
+            renderItem={({ item }) => {
+              return <CohotCard title={item.title} image={item.image} />;
+            }}
+            keyExtractor={(item) => item.id}
+          />
         </View>
       </View>
     );

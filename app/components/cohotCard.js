@@ -18,7 +18,7 @@ import {
 
 import AppLoading from "expo-app-loading";
 
-const CohotCard = () => {
+const CohotCard = ({title, image}) => {
   let [fontsLoaded] = useFonts({
     SourceSansPro_200ExtraLight,
     SourceSansPro_200ExtraLight_Italic,
@@ -39,9 +39,15 @@ const CohotCard = () => {
   } else {
     return (
       <View style={styles.box}>
-        <Text style={styles.title}>Class 6th</Text>
+        
+          <Text style={styles.title}>{title}</Text>
+        
+
         <View style={styles.imageContainer}>
-          <Image source={require("../../assets/ninja.png")} style={styles.image} />
+          <Image
+            source={image}
+            style={styles.image}
+          />
         </View>
       </View>
     );
@@ -50,23 +56,31 @@ const CohotCard = () => {
 
 const styles = StyleSheet.create({
   box: {
-    width: 190,
+    width: 195,
     backgroundColor: "#fe5242",
     height: 130,
     borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
+    marginRight: 10,
+    marginTop: 10,
+    marginLeft: 20
   },
   title: {
     color: "#fff",
     fontSize: 25,
-
+    marginTop: 32,
     fontFamily: "SourceSansPro_600SemiBold",
   },
   image: {
     width: 30,
     height: 30,
-  }
+  },
+  imageContainer: {
+    width: 190,
+    marginTop: 15,
+    marginLeft: 10,
+  },
 });
 
 export default CohotCard;
